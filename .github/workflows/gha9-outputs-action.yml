@@ -9,6 +9,6 @@ jobs:
       output2: "world"
     steps:
       - id: step1
-        run: echo  "${{jobs.job1.outputs.output1}}"
+        run: echo  hello 
       - id: step2
         run: echo  world
