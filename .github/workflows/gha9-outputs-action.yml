@@ -1,4 +1,4 @@
-name: First workflow2
+name: outputs workflow
 on: push
 jobs:
   job1:
@@ -9,6 +9,6 @@ jobs:
       output2: "world"
     steps:
       - id: step1
-        run: echo  hello 
+        run: echo  "mesg=hello"  >> "$GITHUB_OUTPUT"
       - id: step2
-        run: echo  world
+        run: echo  "mesg=world"  >> "$GITHUB_OUTPUT"
