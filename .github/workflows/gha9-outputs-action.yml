@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      output1: "hello"
-      output2: "world"
+      output1: ${{ steps.step1.outputs.mesg }}
+      output2: ${{ steps.step2.outputs.mesg }}
     steps:
       - id: step1
         run: echo  "mesg=hello"  >> "$GITHUB_OUTPUT"
